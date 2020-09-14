@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Todo from "./components/Todo.js";
+import Todo from "./components/Todo";
+import Counter from "./components/Counter";
 //rafce :- create arrow function
 class App extends React.Component {
   state = {
@@ -18,7 +19,7 @@ class App extends React.Component {
       {
         id: "3",
         title: "Lasagnia for dinner",
-        completed: false,
+        completed: true,
       },
       {
         id: "4",
@@ -30,6 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Counter />
         <Todo todo={this.state.todo} />
       </div>
     );
